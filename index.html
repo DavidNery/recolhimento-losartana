@@ -331,12 +331,14 @@
 
       alertDiv.classList.remove('bg-red');
       alertDiv.classList.remove('bg-green');
-      if (lotes[marca].includes(lote)) {
+      if (!lotes[marca].includes(lote)) {
         alertDiv.classList.add('bg-green');
         alertDiv.innerHTML = 'Pode ficar tranquilo! Não há nenhum problema com a sua losartana!';
       } else {
         alertDiv.classList.add('bg-red');
-        alertDiv.innerHTML = 'Eita. Sua losartana deve ser recolhida.<br/><strong>NÃO PARE DE USAR</strong> sua losartana por conta própria. Isso é extremamente arriscado para a sua saúde!';
+        alertDiv.innerHTML = `
+        Eita. Sua losartana deve ser recolhida. Procure o seu médico ou farmacêutico!
+        <br/><br/><strong>NÃO PARE DE USAR</strong> sua losartana por conta própria. Isso é extremamente arriscado para a sua saúde!`;
       }
 
       alertDiv.style.display = 'block';
