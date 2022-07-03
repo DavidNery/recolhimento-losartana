@@ -75,9 +75,9 @@
       position: relative;
       display: flex;
       gap: 2rem;
-      padding: 20%;
+      padding: 5% 20%;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
     }
 
     header::before,
@@ -129,17 +129,43 @@
     }
 
     header p {
-      width: 60%;
       margin: 0 0 0.5rem 0;
       color: var(--body);
     }
 
     header #losartana {
       position: absolute;
-      height: 70%;
-      top: 15%;
+      height: 40%;
+      top: 30%;
       right: 20%;
       transform: rotate(20deg);
+    }
+
+    @media screen and (max-width: 980px) {
+      header #losartana {
+        display: none;
+      }
+    }
+
+    @media screen and (min-width: 980px) {
+      header #losartana {
+        height: 50%;
+        top: 25%;
+      }
+    }
+
+    @media screen and (min-width: 1280px) {
+      header #losartana {
+        height: 60%;
+        top: 20%;
+      }
+    }
+
+    @media screen and (min-width: 1440px) {
+      header #losartana {
+        height: 70%;
+        top: 15%;
+      }
     }
 
     #bubble-2 {
@@ -178,7 +204,6 @@
     .form-group {
       display: flex;
       flex-direction: column;
-      width: 50%;
     }
 
     .form-group:not(:last-child) {
@@ -203,7 +228,6 @@
       border-radius: 16px;
       font-size: 0.85rem;
       color: white;
-      width: 50%;
     }
 
     .bg-red {
@@ -213,6 +237,20 @@
     .bg-green {
       background-color: var(--green);
     }
+
+    @media screen and (min-width: 980px) {
+      .form-group, .alert {
+        width: 50%;
+      }
+
+      header h4 {
+        width: 60%;
+      }
+
+      header p {
+        width: 60%;
+      }
+    }
   </style>
 </head>
 
@@ -220,7 +258,7 @@
   <header>
     <div>
       <h1>Sobre</h1>
-      <h4 style="width: 60%;">O site <strong>Recolhimento Losartana</strong> foi desenvolvido por um
+      <h4>O site <strong>Recolhimento Losartana</strong> foi desenvolvido por um
         <a href="https://www.instagram.com/davidmnery/" target="_blank">estudante de medicina</a>
         com o intuito de
         facilitar a vida dos profissionais de saúde e da população em geral ao pesquisar sobre os
