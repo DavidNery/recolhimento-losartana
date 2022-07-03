@@ -74,9 +74,10 @@
     header {
       position: relative;
       display: flex;
+      flex-direction: column;
+      justify-content: center;
       gap: 2rem;
       padding: 5%;
-      align-items: center;
       min-height: 100vh;
     }
 
@@ -110,7 +111,7 @@
 
     h1 {
       font-size: 5rem;
-      margin: 0 0 1rem 0;
+      margin: 0;
       color: var(--black);
     }
 
@@ -254,7 +255,9 @@
     }
 
     @media screen and (min-width: 980px) {
-      .form-group, .alert {
+
+      .form-group,
+      .alert {
         width: 50%;
       }
 
@@ -281,36 +284,36 @@
           target="_blank">lotes anunciados</a>
         pela anvisa para recolhimento.
       </h4>
-      <form accept="#">
-        <div class="form-group">
-          <label for="marca">Marca <sup>1</sup></label>
-          <select name="marca" id="marca" required>
-            <option value="1">Laboratório Teuto Brasileiro S/A</option>
-            <option value="2">Eurofarma Laboratórios Sa</option>
-            <option value="3">Prati, Donaduzzi & Cia Ltda.</option>
-            <option value="4">Biolab Sanus Farmacêutica Ltda.</option>
-            <option value="5">Cimed Indústria S.A.</option>
-            <option value="6">Aché Laboratórios Farmacêuticos S.A</option>
-            <option value="7">Geolab Indústria Farmacêutica Sa</option>
-            <option value="8">Brainfarma Indústria Química E Farmacêutica S.A</option>
-          </select>
-        </div>
-
-        <div class="form-group">
-          <label for="lote">Lote <sup>2</sup></label>
-          <input type="text" name="lote" id="lote" required />
-        </div>
-
-        <p style="font-size: 0.85rem">1. Se a marca da sua Losartana não estiver aqui, nenhum lote dela necessita ser
-          recolhido.</p>
-        <p style="font-size: 0.85rem">2. Não há um local específico para o número do lote, mas geralmente ele
-          encontra-se abaixo da validade, começando com a letra <strong>L</strong> (ex.: L123456789 - O lote nesse caso
-          é <strong>123456789</strong>).</p>
-
-        <div class="alert" style="display: none; margin-bottom: 2rem;"></div>
-        <button type="submit">Verificar minha losartana</button>
-      </form>
     </div>
+    <form accept="#">
+      <div class="form-group">
+        <label for="marca">Marca <sup>1</sup></label>
+        <select name="marca" id="marca" required>
+          <option value="1">Laboratório Teuto Brasileiro S/A</option>
+          <option value="2">Eurofarma Laboratórios Sa</option>
+          <option value="3">Prati, Donaduzzi & Cia Ltda.</option>
+          <option value="4">Biolab Sanus Farmacêutica Ltda.</option>
+          <option value="5">Cimed Indústria S.A.</option>
+          <option value="6">Aché Laboratórios Farmacêuticos S.A</option>
+          <option value="7">Geolab Indústria Farmacêutica Sa</option>
+          <option value="8">Brainfarma Indústria Química E Farmacêutica S.A</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="lote">Lote <sup>2</sup></label>
+        <input type="text" name="lote" id="lote" required />
+      </div>
+
+      <p style="font-size: 0.85rem">1. Se a marca da sua Losartana não estiver aqui, nenhum lote dela necessita ser
+        recolhido.</p>
+      <p style="font-size: 0.85rem">2. Não há um local específico para o número do lote, mas geralmente ele
+        encontra-se abaixo da validade, começando com a letra <strong>L</strong> (ex.: L123456789 - O lote nesse caso
+        é <strong>123456789</strong>).</p>
+
+      <div class="alert" style="display: none; margin-bottom: 2rem;"></div>
+      <button type="submit">Verificar minha losartana</button>
+    </form>
     <img id="losartana" src="./img/losartana.png" alt="losartana">
     <img id="bubble-2" src="./img/bubble-2.png" alt="bubble">
   </header>
